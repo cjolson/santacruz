@@ -1,32 +1,67 @@
-.App {
-  text-align: center;
+.home {
+  background-color: #05F5FA;
+  height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.map-container {
+  width: 75%;
+  float: right;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.map {
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.pin-container {
+  position: absolute;
+  padding: 10px;
+  transition: all .2s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pin-container:hover > .pin {
+  transform: scale(1.2);
+}
+
+.aptos {
+  top: 55%;
+  right: 8%;
+}
+
+.bouldercreek {
+  top: 3%;
+  right: 48%;
+}
+
+.capitola {
+  top: 60%;
+  right: 22%;
+}
+
+.davenport {
+  top: 55%;
+  right: 58%;
+}
+
+.felton {
+  top: 35%;
+  right: 40%;
+}
+
+.santacruz {
+  top: 64%;
+  right: 38%;
+}
+
+.logo-container {
+  position: absolute;;
+  left: 0;
+  bottom: 0;
+  padding: 0 0 30px 50px;
+}
+
+.logo {
+  height: 50vh;
+  width: auto;
+  height: inherit;
 }
