@@ -2,30 +2,42 @@ import React, { Component } from 'react';
 import City from './City.js';
 import './App.css';
 
-import map_pin from './assets/map_pin.png';
-import map from './assets/map.png';
-import logo from './assets/logo.png';
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+
+const images = importAll(require.context('./assets', false, /\.(png|jpe?g|svg)$/));
 
 class Map extends Component {
   constructor(props) {
     super(props);
-    var aptos = {name: 'aptos'};
-    var bouldercreek = {name: 'bouldercreek'};
-    var capitola = {name: 'capitola'};
-    var davenport = {name: 'davenport'};
-    var felton = {name: 'felton'};
-    var santacruz = {name: 'santacruz'};
+    var aptos = {name: 'aptos', label: images['label_aptos.png']};
+    var bouldercreek = {name: 'bouldercreek', label: images['label_bouldercreek.png']};
+    var capitola = {name: 'capitola', label: images['label_capitola.png']};
+    var davenport = {name: 'davenport', label: images['label_davenport.png']};
+    var felton = {name: 'felton', label: images['label_felton.png']};
+    var santacruz = {name: 'santacruz', label: images['label_santacruz.png']};
 
     this.state = {
       list: [aptos, bouldercreek, capitola, davenport, felton, santacruz],
       mapview: 1,
-      detail: null,
+      city: null,
     }
   }
 
-  viewCityDetail(id) {
+  selectCity(id) {
     var city = this.state.list[id];
     console.log(city.name);
+    var cityView = <City
+      onClose = {(ev) => this.setState({city: null, mapview: 1})}
+      label={city.label}
+      name={city.name} />;
+    this.setState({
+      mapview: 0,
+      city: cityView,
+    });
     return null;
   }
 
@@ -36,9 +48,9 @@ class Map extends Component {
         elements.push(
           <div
             className={pin.name+' pin-container'}
-            onClick={this.viewCityDetail.bind(this, i)}
+            onClick={this.selectCity.bind(this, i)}
             key={i}>
-            <img className='pin' src={map_pin} alt=''/>
+            <img className='pin' src={images['map_pin.png']} alt='pin'/>
           </div>
         );
     }
@@ -49,25 +61,38 @@ class Map extends Component {
     );
   }
 
-  render() {
+  renderCity() {
+    if (this.state.city != null) {
+      return this.state.city;
+    }
+  }
+
+  renderMap() {
     return (
       <div className="home">
         <div className="map-container">
           <img
             className="map"
-            src={map}
+            src={images['map.png']}
             alt="map"
             />
-            {this.renderMapPins()};
+          {this.renderMapPins()};
         </div>
         <div className="logo-container">
           <img
             className = "logo"
-            src = {logo}
+            src = {images['logo.png']}
             alt = "santa cruz"/>
         </div>
       </div>
     );
+  }
+
+  render() {
+    if (this.state.mapview === 1) {
+      return (this.renderMap());
+    }
+    return (this.renderCity());
   }
 }
 

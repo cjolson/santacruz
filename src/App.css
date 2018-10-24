@@ -65,3 +65,9 @@
   width: auto;
   height: inherit;
 }
+
+.exit-city {
+  float: right;
+  padding: 30px 90px;
+  font-size: 24px;
+}
