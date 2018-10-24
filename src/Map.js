@@ -31,6 +31,7 @@ class Map extends Component {
         onClose = {(ev) => this.setState({city: null, mapview: 1})}
         label={city.label}
         name={city.name}
+        pics={city.pics}
       />);
     this.setState({
       mapview: 0,
