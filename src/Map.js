@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import City from './City.js';
 import './App.css';
+import locations from './locations.js';
+
 
 function importAll(r) {
   let images = {};
@@ -8,32 +10,28 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(require.context('./assets', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('./map_assets', false, /\.(png|jpe?g|svg)$/));
+
 
 class Map extends Component {
   constructor(props) {
     super(props);
-    var aptos = {name: 'aptos', label: images['label_aptos.png']};
-    var bouldercreek = {name: 'bouldercreek', label: images['label_bouldercreek.png']};
-    var capitola = {name: 'capitola', label: images['label_capitola.png']};
-    var davenport = {name: 'davenport', label: images['label_davenport.png']};
-    var felton = {name: 'felton', label: images['label_felton.png']};
-    var santacruz = {name: 'santacruz', label: images['label_santacruz.png']};
-
     this.state = {
-      list: [aptos, bouldercreek, capitola, davenport, felton, santacruz],
+      locations: locations,
       mapview: 1,
       city: null,
     }
   }
 
   selectCity(id) {
-    var city = this.state.list[id];
+    var city = this.state.locations[id];
     console.log(city.name);
-    var cityView = <City
-      onClose = {(ev) => this.setState({city: null, mapview: 1})}
-      label={city.label}
-      name={city.name} />;
+    var cityView = (
+      <City
+        onClose = {(ev) => this.setState({city: null, mapview: 1})}
+        label={city.label}
+        name={city.name}
+      />);
     this.setState({
       mapview: 0,
       city: cityView,
@@ -43,16 +41,20 @@ class Map extends Component {
 
   renderMapPins() {
     var elements = [];
-    for (var i=0; i<this.state.list.length; i++) {
-        var pin = this.state.list[i];
-        elements.push(
-          <div
-            className={pin.name+' pin-container'}
-            onClick={this.selectCity.bind(this, i)}
-            key={i}>
-            <img className='pin' src={images['map_pin.png']} alt='pin'/>
-          </div>
-        );
+    var cities = this.state.locations;
+    var keys = Object.keys(cities);
+    console.log('generating pins...');
+    for (var i=0; i<keys.length; i++) {
+      var pin = cities[keys[i]];
+      console.log(i);
+      elements.push(
+        <div
+          className={pin.name+' pin-container'}
+          onClick={this.selectCity.bind(this, keys[i])}
+          key={i}>
+          <img className='pin' src={images['map_pin.png']} alt='pin'/>
+        </div>
+      );
     }
     return (
       <div>

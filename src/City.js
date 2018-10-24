@@ -6,7 +6,7 @@ class City extends Component {
   render() {
     return (
       <div>
-        <div class='exit-city' onClick={this.props.onClose}>X</div>
+        <div className='exit-city' onClick={this.props.onClose}>X</div>
         <img src={this.props.label} alt={this.props.name}></img>
       </div>
     );
