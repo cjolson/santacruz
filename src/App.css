@@ -1,3 +1,8 @@
+body, html {
+    overflow-y: hidden;
+    height: 100%;
+}
+
 .home {
   background-color: #33CCCC;
   height: 100vh;
@@ -66,9 +71,78 @@
   height: inherit;
 }
 
+.city-view {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+  padding: .5% 3%;
+}
+
+.featured {
+  width: 10%;
+  overflow: hidden;
+}
+
+
+.city-label {
+  position: absolute;
+  top: -100px;
+  left: -280px;
+  height: 1100px;
+  width: auto;
+}
+
+.placeholder-img {
+  position: absolute;
+  border-radius: 50%;
+  top: -100px;
+  left: -280px;
+  background-color: #d3d3d3;
+  height: 1100px;
+  width: 1100px;
+  overflow: hidden;
+}
+
 .exit-city {
-  float: right;
-  padding: 30px 90px;
   font-size: 24px;
+  font-weight: bold;
+  float: right;
   cursor: pointer;
+}
+
+.content {
+  margin: 0 0 20px 0;
+  padding: 5px 30px;
+  overflow-y: scroll;
+  height: 500px;
+  align-self: flex-start;
+}
+
+.details {
+  margin: 0 8% auto 64%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.image-previews {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 240px;
+}
+
+.placeholder {
+  background-color: #d3d3d3;
+  width: 32%;
+  height: 48%
+}
+
+.placeholder:hover {
+  transform: scale(1.2);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
 }

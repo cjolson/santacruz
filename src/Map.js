@@ -29,9 +29,14 @@ class Map extends Component {
     var cityView = (
       <City
         onClose = {(ev) => this.setState({city: null, mapview: 1})}
-        label={city.label}
         name={city.name}
+        id={city.id}
+        label={city.label}
         pics={city.pics}
+        title={city.title}
+        intro={city.intro}
+        must_see={city.must_see}
+        top_five={city.top_five}
       />);
     this.setState({
       mapview: 0,
@@ -50,7 +55,7 @@ class Map extends Component {
       console.log(i+1);
       elements.push(
         <div
-          className={pin.name+' pin-container'}
+          className={pin.id+' pin-container'}
           onClick={this.selectCity.bind(this, keys[i])}
           key={i}>
           <img className='pin' src={images['map_pin.png']} alt='pin'/>

@@ -8,10 +8,11 @@ const images = importAll(require.context('./city_assets', false, /\.(png|jpe?g|s
 
 const locations = {
   aptos: {
-    name: 'aptos',
+    name: 'Aptos',
+    id: 'aptos',
     label: images['label_aptos.png'],
     pics: [],
-    title: `Aptos: Redwoods and the Seas in One Idyllic Enviroment`,
+    title: `Redwoods and the Seas in One Idyllic Enviroment`,
     intro: `The picturesque town of Aptos is in an unincorporated area of Santa
     Cruz County that includes the Rio Del Mar, Seacliff and Seascape areas. It is
     also home to historic Aptos Village, and the gateway to the Forest of Nisene
@@ -46,10 +47,11 @@ const locations = {
                 Sanctuary at the Interpretive Exhibit at Seacliff State Beach.`],
   },
   capitola: {
-    name: 'capitola',
+    name: 'Capitola & Soquel',
+    id: 'capitola',
     label: images['label_capitola.png'],
     pics: [],
-    title: `Capitola & Soquel: Relaxed Seaside and Rural Charm`,
+    title: `Relaxed Seaside and Rural Charm`,
     intro: `Capitola’s seaside charm, combined with the rural feel of nearby
     Soquel oftentimes leave visitors longing for a more relaxed way of life in
     these small towns just south of Santa Cruz. Capitola Village, the Pacific
@@ -82,10 +84,11 @@ const locations = {
                 gardens and breathe in the ambiance.`],
   },
   davenport: {
-    name: 'davenport',
+    name: 'Davenport',
+    id: 'davenport',
     label: images['label_davenport.png'],
     pics: [images['davenport1.jpg']],
-    title: 'Davenport: Rugged Coastline and Solitary Beaches',
+    title: 'Rugged Coastline and Solitary Beaches',
     intro: 'Eleven miles north of Santa Cruz, Davenport’s rugged yet beautiful \
     coastline overlooks windswept, solitary beaches, where translucent waves \
     crash against the rustic California ledge.',
@@ -116,10 +119,11 @@ const locations = {
                 the bluffs at Davenport – the perfect vantage point!`],
   },
   sanlorenzovalley: {
-    name: 'sanlorenzovalley',
+    name: 'San Lorenzo Valley',
+    id: 'sanlorenzovalley',
     label: images['label_slv.png'],
     pics: [],
-    title: 'San Lorenzo Valley: Wind Your Way Through the Redwoods',
+    title: 'Wind Your Way Through the Redwoods',
     intro: `The San Lorenzo River begins in the Santa Cruz Mountains, winding its
     way through Ben Lomond, Boulder Creek, Brookdale and Felton before spilling
     into the Monterey Bay. Once home to a bustling logging industry, the mountains
@@ -157,10 +161,11 @@ const locations = {
                 millions of years ago this region was under the sea.`],
   },
   santacruz: {
-    name: 'santacruz',
+    name: 'Santa Cruz',
+    id: 'santacruz',
     label: images['label_santacruz.png'],
     pics: [],
-    title: `Santa Cruz: The Perfect Beachside Destination`,
+    title: `The Perfect Beachside Destination`,
     intro: `Santa Cruz is undoubtedly the quintessential California beach town,
     awakening nostalgic memories of summers past and inspiring a new generation.
     But while Santa Cruz is the classic spot to dig your toes into the warm sand
@@ -205,10 +210,11 @@ const locations = {
                 Avenue.`],
   },
   scottsvalley: {
-    name: 'scottsvalley',
+    name: 'Scotts Valley',
+    id: 'scottsvalley',
     label: images['label_scottsvalley.png'],
     pics: [],
-    title: `Scotts Valley: Gateway to the Santa Cruz Mountains`,
+    title: `Gateway to the Santa Cruz Mountains`,
     intro: `Scotts Valley, located amidst the area's dramatic redwood forests
     in the western region of the Santa Cruz Mountains, is a small suburban
     community with a proud link to the past. Once a stagecoach stop between
