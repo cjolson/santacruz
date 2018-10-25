@@ -20,17 +20,12 @@
 }
 
 .pin-container:hover > .pin {
-  transform: scale(1.2);
+  transform: scale(1.4);
 }
 
 .aptos {
   top: 55%;
   right: 8%;
-}
-
-.bouldercreek {
-  top: 3%;
-  right: 48%;
 }
 
 .capitola {
@@ -43,14 +38,19 @@
   right: 58%;
 }
 
-.felton {
-  top: 35%;
+.sanlorenzovalley {
+  top: 28%;
   right: 40%;
 }
 
 .santacruz {
   top: 64%;
   right: 38%;
+}
+
+.scottsvalley {
+  top: 40%;
+  right: 30%;
 }
 
 .logo-container {
@@ -71,8 +71,4 @@
   padding: 30px 90px;
   font-size: 24px;
   cursor: pointer;
-}
-
-.featured-pic {
-  border-radius: 50%;
 }

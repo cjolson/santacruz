@@ -47,7 +47,7 @@ class Map extends Component {
     console.log('generating pins...');
     for (var i=0; i<keys.length; i++) {
       var pin = cities[keys[i]];
-      console.log(i);
+      console.log(i+1);
       elements.push(
         <div
           className={pin.name+' pin-container'}
