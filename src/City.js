@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 
 class City extends Component {
-  constructor() {
-    super();
-    this.setState = {
-      image: 0,
-    }
+  constructor(props) {
+    super(props);
+    this.state = ({
+      feature: 0,
+    });
   }
 
   generateMustSee() {
@@ -14,7 +14,7 @@ class City extends Component {
     var must_see = this.props.must_see;
     for(var i=0; i<must_see.length; i++) {
       elements.push(
-        <p>{must_see[i]}</p>
+        <p key={i}>{must_see[i]}</p>
       );
     }
     return (
@@ -26,10 +26,10 @@ class City extends Component {
 
   generateTopFive() {
     var elements = [];
-    var top_five = this.props.top_five
+    var top_five = this.props.top_five;
     for(var i=0; i<top_five.length; i++) {
       elements.push(
-        <li>{top_five[i]}</li>
+        <li key={i}>{top_five[i]}</li>
       );
     }
     return (
@@ -52,11 +52,29 @@ class City extends Component {
     );
   }
 
+  selectImage(id) {
+    console.log('selected '+id);
+    this.setState({
+      feature: id,
+    });
+    console.log(this);
+  }
+
   generateImages() {
     var elements = [];
-    for(var i=0; i<6; i++) {
+    var pics = this.props.pics;
+    for(var i=0; i<pics.length; i++) {
+      console.log('place image '+i);
       elements.push(
-        <div className='placeholder' />
+        <div
+          key={i}
+          className='img-preview-container'
+          onClick={this.selectImage.bind(this, i)}>
+          <img
+            className='img-view'
+            src={pics[i]}
+            alt='' />
+        </div>
       );
     }
     return(
@@ -67,9 +85,16 @@ class City extends Component {
   }
 
 generateFeature() {
+  console.log(this.state);
+  console.log(this);
     return(
       <div className='featured'>
-        <div className='placeholder-img' />
+        <div className='featured-container'>
+          <img
+            className='img-view'
+            src={this.props.pics[this.state.feature]}
+            alt='' />
+        </div>
         <img className='city-label' src={this.props.label} alt=''/>
       </div>
     );

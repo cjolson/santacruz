@@ -12,7 +12,6 @@ function importAll(r) {
 
 const images = importAll(require.context('./map_assets', false, /\.(png|jpe?g|svg)$/));
 
-
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -58,7 +57,10 @@ class Map extends Component {
           className={pin.id+' pin-container'}
           onClick={this.selectCity.bind(this, keys[i])}
           key={i}>
-          <img className='pin' src={images['map_pin.png']} alt='pin'/>
+          <img
+            className='pin'
+            src={images['map_pin.png']}
+            alt='pin'/>
         </div>
       );
     }

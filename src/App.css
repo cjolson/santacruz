@@ -83,21 +83,22 @@ body, html {
 .featured {
   width: 10%;
   overflow: hidden;
+  z-index: 1;
 }
 
 
 .city-label {
   position: absolute;
-  top: -100px;
+  top: -80px;
   left: -280px;
   height: 1100px;
   width: auto;
 }
 
-.placeholder-img {
+.featured-container {
   position: absolute;
   border-radius: 50%;
-  top: -100px;
+  top: -80px;
   left: -280px;
   background-color: #d3d3d3;
   height: 1100px;
@@ -110,6 +111,7 @@ body, html {
   font-weight: bold;
   float: right;
   cursor: pointer;
+  z-index: 3;
 }
 
 .content {
@@ -121,10 +123,11 @@ body, html {
 }
 
 .details {
-  margin: 0 8% auto 64%;
+  margin: 0 8% 5% 64%;
   display: flex;
   flex-direction: column;
   align-content: space-around;
+  z-index: 2;
 }
 
 .image-previews {
@@ -136,13 +139,20 @@ body, html {
   height: 240px;
 }
 
-.placeholder {
+.img-preview-container {
   background-color: #d3d3d3;
   width: 32%;
-  height: 48%
+  height: 48%;
+  overflow: hidden;
 }
 
-.placeholder:hover {
+.img-preview-container:hover {
   transform: scale(1.2);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
+}
+
+.img-view {
+  object-fit: contain;
+  height: 100%;
+  width: auto;
 }

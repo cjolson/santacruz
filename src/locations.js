@@ -11,7 +11,8 @@ const locations = {
     name: 'Aptos',
     id: 'aptos',
     label: images['label_aptos.png'],
-    pics: [],
+    pics: [images['aptos1.jpg'], images['aptos2.jpg'], images['aptos3.jpg'],
+            images['aptos4.jpg'], images['aptos5.jpg'], images['aptos6.jpg']],
     title: `Redwoods and the Seas in One Idyllic Enviroment`,
     intro: `The picturesque town of Aptos is in an unincorporated area of Santa
     Cruz County that includes the Rio Del Mar, Seacliff and Seascape areas. It is
@@ -50,7 +51,8 @@ const locations = {
     name: 'Capitola & Soquel',
     id: 'capitola',
     label: images['label_capitola.png'],
-    pics: [],
+    pics: [images['capitola1.jpg'], images['capitola2.jpg'], images['capitola3.jpg'],
+            images['capitola4.jpg'], images['capitola5.jpg'], images['capitola6.jpg']],
     title: `Relaxed Seaside and Rural Charm`,
     intro: `Capitola’s seaside charm, combined with the rural feel of nearby
     Soquel oftentimes leave visitors longing for a more relaxed way of life in
@@ -87,7 +89,8 @@ const locations = {
     name: 'Davenport',
     id: 'davenport',
     label: images['label_davenport.png'],
-    pics: [images['davenport1.jpg']],
+    pics: [images['davenport1.jpg'], images['davenport2.jpg'], images['davenport3.jpg'],
+            images['davenport4.jpg'], images['davenport5.jpg'], images['davenport6.jpg']],
     title: 'Rugged Coastline and Solitary Beaches',
     intro: 'Eleven miles north of Santa Cruz, Davenport’s rugged yet beautiful \
     coastline overlooks windswept, solitary beaches, where translucent waves \
@@ -122,7 +125,8 @@ const locations = {
     name: 'San Lorenzo Valley',
     id: 'sanlorenzovalley',
     label: images['label_slv.png'],
-    pics: [],
+    pics: [images['slv1.jpg'], images['slv2.jpg'], images['slv3.jpg'],
+            images['slv4.jpg'], images['slv5.jpg'], images['slv6.jpg']],
     title: 'Wind Your Way Through the Redwoods',
     intro: `The San Lorenzo River begins in the Santa Cruz Mountains, winding its
     way through Ben Lomond, Boulder Creek, Brookdale and Felton before spilling
@@ -164,7 +168,8 @@ const locations = {
     name: 'Santa Cruz',
     id: 'santacruz',
     label: images['label_santacruz.png'],
-    pics: [],
+    pics: [images['santacruz1.jpg'], images['santacruz2.jpg'], images['santacruz3.jpg'],
+            images['santacruz4.jpg'], images['santacruz5.jpg'], images['santacruz6.jpg']],
     title: `The Perfect Beachside Destination`,
     intro: `Santa Cruz is undoubtedly the quintessential California beach town,
     awakening nostalgic memories of summers past and inspiring a new generation.
@@ -213,7 +218,8 @@ const locations = {
     name: 'Scotts Valley',
     id: 'scottsvalley',
     label: images['label_scottsvalley.png'],
-    pics: [],
+    pics: [images['scottsvalley1.jpg'], images['scottsvalley2.jpg'], images['scottsvalley3.jpg'],
+            images['scottsvalley4.jpg'], images['scottsvalley5.jpg'], images['scottsvalley6.jpg']],
     title: `Gateway to the Santa Cruz Mountains`,
     intro: `Scotts Valley, located amidst the area's dramatic redwood forests
     in the western region of the Santa Cruz Mountains, is a small suburban
