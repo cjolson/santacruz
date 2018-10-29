@@ -57,6 +57,7 @@ class Map extends Component {
           className={pin.id+' pin-container'}
           onClick={this.selectCity.bind(this, keys[i])}
           key={i}>
+          <div className='pin-name'><h3>{pin.name}</h3></div>
           <img
             className='pin'
             src={images['map_pin.png']}

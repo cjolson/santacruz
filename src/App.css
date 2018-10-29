@@ -1,6 +1,30 @@
+@@font-face {
+  font-family: 'Open Sans';
+}
+
 body, html {
     overflow-y: hidden;
     height: 100%;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: #FF8474;
+}
+
+h2 {
+  font-family: 'Alegreya', serif;
+  color: #055159;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  color: #055159;
+}
+
+p {
+  font-family: 'Domine', serif;
 }
 
 .home {
@@ -22,39 +46,50 @@ body, html {
   position: absolute;
   padding: 10px;
   transition: all .2s ease-in-out;
+  text-align: center;
+}
+
+.pin-name {
+  visibility: hidden;
+  text-align: center;
+
 }
 
 .pin-container:hover > .pin {
   transform: scale(1.4);
 }
 
+.pin-container:hover > .pin-name {
+  visibility: visible;
+}
+
 .aptos {
-  top: 55%;
+  top: 48%;
   right: 8%;
 }
 
 .capitola {
-  top: 60%;
-  right: 22%;
+  top: 53%;
+  right: 18%;
 }
 
 .davenport {
-  top: 55%;
+  top: 45%;
   right: 58%;
 }
 
 .sanlorenzovalley {
-  top: 28%;
+  top: 20%;
   right: 40%;
 }
 
 .santacruz {
-  top: 64%;
-  right: 38%;
+  top: 59%;
+  right: 34%;
 }
 
 .scottsvalley {
-  top: 40%;
+  top: 35%;
   right: 30%;
 }
 
@@ -72,12 +107,16 @@ body, html {
 }
 
 .city-view {
+  overflow: hidden;
   height: 100vh;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-around;
   padding: .5% 3%;
+  background-image: url('./city_assets/subtle_white_mini_waves.png');
+  background-blend-mode: soft-light;
 }
 
 .featured {
@@ -116,11 +155,11 @@ body, html {
 
 .content {
   margin: 0 0 20px 0;
-  padding: 5px 30px;
   overflow-y: scroll;
   height: 500px;
   align-self: flex-start;
 }
+
 
 .details {
   margin: 0 8% 5% 64%;
@@ -128,6 +167,8 @@ body, html {
   flex-direction: column;
   align-content: space-around;
   z-index: 2;
+  background-color: #FFF;
+  padding: 20px;
 }
 
 .image-previews {
